@@ -11,7 +11,6 @@
 <div class="bg-white">
     <div class="container pt">
         <h2>The Escape</h2>
-        <p>As seems to be common in the 2020s, their entire existance is due to some casual misgendering.</p>
         <p>You see, there was once a group of three hamsters that lived together that were all told to be girls. They were separated into their own enclosures (which if you're a first time hamster caretaker, hamsters should not be caged together!). While their enclosures were close enough to be convenient to look over them all at once, they were also a bit too close for the determined ham.</p>
         <p>What wasn't known at the moment is that one of the hamsters was actual male. And this poor, unsuspecting male was minding his own business, in an enclosure with a 10+ inch wall height, which you would assume is perfectly safe.</p>
         <p>What you should not assume is the tenacity of a female hamster who was, in purely scientific and biological terms, looking to "get some". She somehow managed to wedge herself between the side of her cage and her water bottle and shimmied up the side of her enclosure, high enough to grab onto and vault herself over the edge and into the male hamsters cage.</p>
@@ -38,7 +37,7 @@
 <div class="bg-white">
     <div class="container pt">
         <h2>Road Trip!</h2>
-        <p>Much like their human father, these hamsters are New Jersey transplants. Of course, I had the choice to come here and decided to stay after finding Michelle. These two didn't have much of a choice.</p>
+        <p>Much like their human father, these hamsters are New Jersey transplants. Of course, I had the choice to come here and decided to stay after finding Michelle, <a href="https://en.wikipedia.org/wiki/Coffee_milk" target="_blank">coffee milk</a>, and <a href="https://www.providencejournal.com/story/lifestyle/food/2023/02/09/what-is-a-rhode-island-pizza-strip-what-it-is-and-where-to-get-some/69837876007/" target="_blank">pizza strips</a>. These two didn't have much of a choice.</p>
         <p>With the halfway point between us and our new children being somewhere in Connecticut, the aquisition of the hamsters was done on the side of an IKEA parking lot, near some construction on a far fence. To the untrained eye, it definitely looked like a shady back alley deal was going on. Granted, Swedish meatballs and lingonberry jam are pretty easy to get addicted to, I don't think they count.</p>
         <hr>
         <p>Packed up in the car with a 98 mile trip ahead of us, we were off! Keeping the music low while Jupiter slept, and trying to avoid potholes while Mushroom wanted nothing to do with us. If we didn't know better, we'd think Mushroom did NOT want to be there. After a little over an hour and a half, we were back in Rhode Island with the hamsters asleep and waiting for their new homes.</p>

@@ -1,0 +1,8 @@
+$background: #ffcc90; //rgba(#ffbb69, .5);
+$j: #D2B48C;
+$m: #7a6e50;
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

@@ -136,8 +136,8 @@
 
 <div class="container">
 	<div class="mt mb">
-		<h2>"Juuupiter! She's a really cute hamster. Jupiter. Running on the wheel now."</h2>
-		<span>- Michelle, sung to the tune of <a href="https://youtu.be/vHQL71zQxiU?si=Kumaa0s91NqgHE85&t=15" target="_blank">"Cynthia Work Out" from Rugrats</a></span>
+		<h2>"Juuupiter! She's a really cute hamster. Jupiter! Running on the wheel now."</h2>
+		<span>- Michelle, sung to the tune of <a href="https://youtu.be/vHQL71zQxiU?si=Kumaa0s91NqgHE85&t=15" target="_blank">"Cynthia Work-Out" from Rugrats</a></span>
 	</div>
 </div>
 

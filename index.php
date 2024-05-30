@@ -96,15 +96,10 @@ $datediff = $now - $your_date;
 	<div class="mini-container mb">
 		<h2>Wheel Spins</h2>
 		<p>Since November 11th, 2023, the girls have had pedometers on their wheels. This helped us keep track of how active they were at night, especially since their most active hours are between 1-4am. We knew they were active at night, but we didn't know <i>how</i> active. We really wish we got these much earlier, but we never knew they existed, so we'll take any data we can get.</p>
-		<br>
 		<p>We always thought <strong class="j">Jupiter</strong> was the runner of the two, considering we'd never really seen <strong class="m">Mushroom</strong> out on her wheel when we were awake, so we were expecting her numbers to be low. We know any enclosure cleanings stressed her out, which is why we try to do full cleans as little as possible, so those days typically have a higher spike. This we expected.</p>
-		<br>
 		<p>What we didn't expect was the explosion of speed and endurance <strong class="m">Mushroom</strong> had! We were shocked the first night she crossed the 15,000 spin threshold, thinking "wow she finally caught up to Jupes!", but then proceeded to blow past her. As of right now her record stands at 30,962 spins.<p>
-		<br>
 		<p>Accounting for just about 26" per rotation on her 8.25" wheel, and shaving by <?php echo $ratio_m * 100; ?>% since it still spins once she hops off, that comes to <?php echo number_format( 30962 * ( 1 - $ratio_m ) * 25.918 ); ?> inches of travel. That is <strong><?php echo number_format( 30962 * ( 1 - $ratio_m ) * 25.918 / (12*5280), 3 ); ?></strong> miles! Can you imagine!? I struggle to run one mile, and this little ham does double digits some nights.</p>
-		<br>
 		<p>These days, the girls seem to have slowed down, keeping to under 10k spins most nights. A part of me wants to believe they just thrive in the cold weather months, or enjoy the blasts of heat from the vents near by late at night, but they're getting old. While the 20k plus spin nights were a sight to behold, we still appreciate the sub 5k nights, hearing the little pitter patter in the background, along with the occasional stumble.</p>
-		<br>
 		<p>Yes, I'm talking about you <strong class="j">Jupiter</strong>.</p>
 	</div>
 	<div class="container chart-toggle">

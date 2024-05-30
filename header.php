@@ -56,7 +56,7 @@ function is_home() {
             
             <div class="main-nav">
                 <a href="<?php url(); ?>">Meet the Girls</a>
-                <?php /* <a href="<?php url('history'); ?>">History</a> */ ?>
+                <a href="<?php url('history'); ?>">History</a>
                 <?php /* <a href="<?php url('enclosures'); ?>">Enclosures</a> */ ?>
                 <a href="<?php url('photos'); ?>">Photos</a>
             </div>

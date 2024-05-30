@@ -1,74 +1,74 @@
 <?php include( 'header.php' ); ?>
 <?php include('wheel_data.php'); ?>
 
-<h1 id="meet-the-girls">Meet the Girls!</h1>
+<div class="container">
+	<h1 id="meet-the-girls">Meet the Girls!</h1>
 
-<?php /*
-<p>Much like their dad, these girls are New Jersey transplants.<br>
-Much like their mom, they have no plans to leave Rhode Island.</p>
-*/ ?>
+	<?php /*
+	<p>Much like their dad, these girls are New Jersey transplants.<br>
+	Much like their mom, they have no plans to leave Rhode Island.</p>
+	*/ ?>
 
-<div class="flex equal top meet">
-	<div class="meet-container meet-jupiter">
-		<img src="<?php url('assets/jupes.jpg'); ?>" />
-		<h2>Jupiter</h2>
-		<div class="meet-stats">
-			<ul>
-				<li>
-					<strong>Nicknames</strong>
-					Jupes, Jupey Poops, Jupiter Poopiter, <br> Jupey Mother F'in Poopies
-				</li>
-				<li>
-					<strong>Fun Tidbit</strong>
-					<ul>
-						<li>Stumbles on her wheel anytime the light in a room changes!</li>
-					</ul>
-				</li>
-				<li>
-					<strong>Born</strong>
-					May 30th, 2022
-				</li>
-				<li>
-					<strong>Adopted</strong>
-					July 9th, 2022
-				</li>
 
-			</ul>
+	<div class="flex equal top meet">
+		<div class="meet-container meet-jupiter">
+			<img src="<?php url('assets/jupes.jpg'); ?>" />
+			<h2>Jupiter</h2>
+			<div class="meet-stats">
+				<ul>
+					<li>
+						<strong>Nicknames</strong>
+						Jupes, Jupey Poops, Jupiter Poopiter, <br> Jupey Mother F'in Poopies
+					</li>
+					<li>
+						<strong>Fun Tidbit</strong>
+						<ul>
+							<li>Stumbles on her wheel anytime the light in a room changes!</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Born</strong>
+						May 30th, 2022
+					</li>
+					<li>
+						<strong>Adopted</strong>
+						July 9th, 2022
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="meet-container meet-mushroom">
+			<img src="<?php url('assets/mushroom.jpg'); ?>" />
+			<h2>Mushroom</h2>
+			<div class="meet-stats">
+				<ul>
+					<li>
+						<strong>Nicknames</strong>
+						Mush, Mushy-ush, <br>MUSHROOM STOP BITING ME
+					</li>
+					<li>
+						<strong>Fun Tidbit</strong>
+						<ul>
+							<li>Strong enough to carry her seed ball around the enclosure...in her teeth!</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Born</strong>
+						May 30th, 2022
+					</li>
+					<li>
+						<strong>Adopted</strong>
+						July 10th, 2022
+					</li>
+
+				</ul>
+			</div>
 		</div>
 	</div>
-	<div class="meet-container meet-mushroom">
-		<img src="<?php url('assets/mushroom.jpg'); ?>" />
-		<h2>Mushroom</h2>
-		<div class="meet-stats">
-			<ul>
-				<li>
-					<strong>Nicknames</strong>
-					Mush, Mushy-ush, <br>MUSHROOM STOP BITING ME
-				</li>
-				<li>
-					<strong>Fun Tidbit</strong>
-					<ul>
-						<li>Strong enough to carry her seed ball around the enclosure...in her teeth!</li>
-					</ul>
-				</li>
-				<li>
-					<strong>Born</strong>
-					May 30th, 2022
-				</li>
-				<li>
-					<strong>Adopted</strong>
-					July 10th, 2022
-				</li>
-
-			</ul>
-		</div>
+	<div class="text-center">
+		<?php // Why the difference in adoption dates if they're sisters? ?>
 	</div>
-</div>
-<div class="text-center">
-	<?php // Why the difference in adoption dates if they're sisters? ?>
-</div>
-
-<?php // Close Container ?>
 </div>
 
 <img src="<?php url('assets/white-top.png'); ?>" />
@@ -138,12 +138,12 @@ Much like their mom, they have no plans to leave Rhode Island.</p>
 <script src="<?php echo url('spinChart.js'); ?>"></script>
 <script src="<?php echo url('mileChart.js'); ?>"></script>
 
-<?php // Open Container ?>
-<div class="container">
 
+<div class="container">
 	<div class="mt mb">
 		<h2>"Are you girls a town in Florida? Because you look like My Hami"</h2>
 		<span>- Brian</span>
 	</div>
+</div>
 
 <?php include( 'footer.php' ); ?>

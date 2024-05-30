@@ -26,6 +26,14 @@ a {
 	color: $m;
 }
 
+.bf {
+	color: $background;
+
+	&:hover {
+		color: #0bf;
+	}
+}
+
 * {
 	cursor: url(../images/seed30.png), auto !important;
 }

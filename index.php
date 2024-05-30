@@ -87,7 +87,8 @@ $datediff = $now - $your_date;
 		</div>
 	</div>
 	<div class="text-center">
-		<?php // Why the difference in adoption dates if they're sisters? ?>
+		Why the difference in adoption dates if they're sisters?<br>
+		Head on over to their <a href="<?php url('history'); ?>">History</a> and find out!
 	</div>
 </div>
 

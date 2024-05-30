@@ -35,7 +35,7 @@ function is_home() {
     gtag('config', 'G-FS5YYLWVFC');
     </script>
 
-    <link rel="stylesheet" href="<?php url('/css/rhodents.css'); ?>">
+    <link rel="stylesheet" href="<?php url('/css/rhodents.css?ts=2024053-0017'); ?>">
 
     <?php if ( is_home() ): ?>
         <script src="https://cdn.amcharts.com/lib/5/index.js"></script>

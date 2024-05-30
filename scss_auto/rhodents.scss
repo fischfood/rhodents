@@ -46,6 +46,11 @@ a {
 	background: white;
 }
 
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 a:hover, a:hover * {
 	cursor: pointer !important;
 	//cursor: url(../images/seed30-bit-light.png), pointer !important;
@@ -56,6 +61,7 @@ a:hover, a:hover * {
 	margin: 0 auto;
 	width: calc(100vw - 2rem);
 	max-width: 1280px;
+	overflow: auto;
 }
 
 .mini-container {
@@ -269,10 +275,5 @@ a:hover, a:hover * {
 .photo-container {
 	.flex > div {
 		padding: 1rem;
-
-		figcaption {
-			display: block;
-			margin-top: .5rem;
-		}
 	}
 }

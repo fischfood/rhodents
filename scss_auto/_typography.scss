@@ -23,12 +23,13 @@ body {
 	font-family: $body;
 }
 
-h1, h2 {
+h1, h2, blockquote {
 	font-weight: normal;
 	font-family: $header;
+	margin-bottom: .5em;
 }
 
-h2, h3, h4, h5, h6, .subhead {
+h3, h4, h5, h6, .subhead {
 	font-weight: normal;
 	font-family: $subheader;
 }
@@ -39,7 +40,12 @@ h1 {
 }
 
 h2 {
-	font-size: 2.5em
+	font-size: 2.5em;
+}
+
+blockquote {
+	font-size: 2.5em;
+	padding: 2rem;
 }
 
 h3 {
@@ -58,6 +64,16 @@ h6 {
 	font-size: 1.25em;
 }
 
+p {
+	margin-bottom: 1rem;
+}
+
+figcaption {
+	font-size: .75rem;
+	display: block;
+	margin-top: .5rem;
+}
+
 .text-white {
 	color: white;
 }
@@ -74,4 +90,12 @@ h6 {
 .justify {
 	text-align: justify !important;
 	line-height: 1em;
+}
+
+hr {
+	max-width: 100px;
+	margin: 2rem auto;
+	color: $m;
+	border-top-color: $m;
+	border-bottom-color: $j;
 }

@@ -45,7 +45,7 @@ var yAxis = spinChart.yAxes.push(am5xy.ValueAxis.new(spinRoot, {
 // Series 1 - Jupiter
 var tooltipJ = am5.Tooltip.new(spinRoot, {
   getFillFromSprite: false,
-  labelText: "Jupiter: {valueY} Steps"
+  labelText: "Jupiter: {valueY} Rotations"
 });
 
 tooltipJ.get("background").setAll({
@@ -71,7 +71,7 @@ spinJupiter.set("tooltip", tooltipJ);
 // Series 2 - Mushroom
 var tooltipM = am5.Tooltip.new(spinRoot, {
   getFillFromSprite: false,
-  labelText: "Mushroom: {valueY} Steps"
+  labelText: "Mushroom: {valueY} Rotations"
 });
 
 tooltipM.get("background").setAll({

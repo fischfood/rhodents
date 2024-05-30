@@ -35,7 +35,7 @@ function is_home() {
     gtag('config', 'G-FS5YYLWVFC');
     </script>
 
-    <link rel="stylesheet" href="<?php url('/css/rhodents.css?ts=2024053-0017'); ?>">
+    <link rel="stylesheet" href="<?php url('/css/rhodents.css?ts=2024053-0050'); ?>">
 
     <?php if ( is_home() ): ?>
         <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
@@ -52,7 +52,7 @@ function is_home() {
             <a href="<?php url(); ?>">
                 <img src="<?php url('assets/rhodents_logo.png'); ?>" alt="Rhodents Logo"/>
             </a>
-            <p class="subhead">Two of the world’s cutest hamsters living their best life in Rhode Island</p>
+            <p class="subhead">Two of the world’s cutest hamsters living their best lives in Rhode Island</p>
             
             <div class="main-nav">
                 <a href="<?php url(); ?>">Meet the Girls</a>

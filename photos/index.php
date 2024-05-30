@@ -57,13 +57,13 @@
         'subtitle' => 'October, 2022',
         'videos' => [
             'IMG_7102.mp4' => 'Help...me...up!',
-            'IMG_7107.mp4' => 'Aaand there I go'
+            'IMG_7107.mp4' => 'Aaand there I go.'
         ]
     ],
     'Fan Art' => [
         'photos' => [
-            'TGE_Mushroom.png' => 'Courtesy of theghostegg',
-            'TGE_Jupiter.png' => 'Courtesy of theghostegg',
+            'TGE_Mushroom.png' => '"Mushroom" - Courtesy of theghostegg',
+            'TGE_Jupiter.png' => '"Jupiter" - Courtesy of theghostegg',
         ],
     ],
 ];
@@ -133,5 +133,12 @@
 
     <?php $i++; ?>
 <?php endforeach; ?>
+
+<div class="container">
+	<div class="mt mb">
+		<h2>"Juuupiter! She's a really cute hamster. Jupiter. Running on the wheel now."</h2>
+		<span>- Michelle, sung to the tune of <a href="https://youtu.be/vHQL71zQxiU?si=Kumaa0s91NqgHE85&t=15" target="_blank">"Cynthia Work Out" from Rugrats</a></span>
+	</div>
+</div>
 
 <?php include( '../footer.php' ); ?>

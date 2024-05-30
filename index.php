@@ -1,6 +1,16 @@
 <?php include( 'header.php' ); ?>
 <?php include('wheel_data.php'); ?>
 
+<?php
+$start_date = new DateTime(date("2022/05/30"));
+$end_date = new DateTime( "today" );
+$dd = date_diff($start_date,$end_date);
+
+$now = time(); // or your date as well
+$your_date = strtotime("2022-05-30");
+$datediff = $now - $your_date;
+?>
+
 <div class="container">
 	<h1 id="meet-the-girls">Meet the Girls!</h1>
 
@@ -29,6 +39,10 @@
 					<li>
 						<strong>Born</strong>
 						May 30th, 2022
+						<br>
+						<small><?php echo "$dd->y years, $dd->m month(s), $dd->d day(s) old"; ?></small>
+						<br>
+						<small><?php echo number_format( ( $datediff / (60 * 60 * 24) ) * 35 / 365.25, 2 ); ?> in human years</small>
 					</li>
 					<li>
 						<strong>Adopted</strong>
@@ -56,6 +70,10 @@
 					<li>
 						<strong>Born</strong>
 						May 30th, 2022
+						<br>
+						<small><?php echo "$dd->y years, $dd->m month(s), $dd->d day(s) old"; ?></small>
+						<br>
+						<small><?php echo number_format( ( $datediff / (60 * 60 * 24) ) * 35 / 365.25, 2 ); ?> in human years</small>
 					</li>
 					<li>
 						<strong>Adopted</strong>
@@ -103,7 +121,7 @@
 				<div class="legend legend-j"></div>
 				<strong class="j">Jupiter</strong><br>
 				<small class="block">8.625" Diameter Wheel</small><br>
-				<?php echo number_format( $wd_j[0] ); ?> Spins<br>
+				<?php echo number_format( $wd_j[0] ); ?> Rotations<br>
 				<small><?php echo number_format( $wd_j[0] * ( 1 - $wd_j[1] ) ); ?> (adjusted)</small><br>=<br>
 				<?php echo number_format( $wd_j[0] * ( 1 - $wd_j[1] ) * ($wd_j[2] * pi() ) / (12*5280), 3 ); ?> Miles
 			</div>
@@ -111,7 +129,7 @@
 				<div class="legend legend-m"></div>
 				<strong class="m">Mushroom</strong><br>
 				<small class="block">8.25" Diameter Wheel</small><br>
-				<?php echo number_format( $wd_m[0] ); ?> Spins<br>
+				<?php echo number_format( $wd_m[0] ); ?> Rotations<br>
 				<small><?php echo number_format( $wd_m[0] * ( 1 - $wd_m[1] ) ); ?> (adjusted)</small><br>=<br>
 				<?php echo number_format( $wd_m[0] * ( 1 - $wd_m[1] ) * ($wd_m[2] * pi() ) / (12*5280), 3 ); ?> Miles
 			</div>

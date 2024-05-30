@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'arco';
+    src: url('../fonts/arco-webfont.woff2') format('woff2'),
+         url('../fonts/arco-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'finkheavy';
+    src: url('../fonts/finkheavy-webfont.woff2') format('woff2'),
+         url('../fonts/finkheavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$body: 'Montserrat', sans-serif;
+$header: 'finkheavy'; //'arco';
+$subheader: 'finkheavy';
+
+body {
+	font-family: $body;
+}
+
+h1, h2 {
+	font-weight: normal;
+	font-family: $header;
+}
+
+h2, h3, h4, h5, h6, .subhead {
+	font-weight: normal;
+	font-family: $subheader;
+}
+
+h1 {
+	font-size: 3em;
+	//text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2.5em
+}
+
+h3 {
+	font-size: 2em
+}
+
+h4 {
+	font-size: 1.75em;
+}
+
+h5 {
+	font-size: 1.5em
+}
+
+h6 {
+	font-size: 1.25em;
+}
+
+.text-white {
+	color: white;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.centered {
+	display: block;
+	text-align: center;
+}
+
+.justify {
+	text-align: justify !important;
+	line-height: 1em;
+}

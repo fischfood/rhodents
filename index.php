@@ -1,0 +1,133 @@
+<?php include( 'header.php' ); ?>
+<?php include('wheel_data.php'); ?>
+
+<h1 id="meet-the-girls">Meet the Girls!</h1>
+
+<?php /*
+<p>Much like their dad, these girls are New Jersey transplants.<br>
+Much like their mom, they have no plans to leave Rhode Island.</p>
+*/ ?>
+
+<div class="flex equal top meet">
+	<div class="meet-container meet-jupiter">
+		<img src="<?php url('images/jupes.jpg'); ?>" />
+		<h2>Jupiter</h2>
+		<div class="meet-stats">
+			<ul>
+				<li>
+					<strong>Nicknames</strong>
+					Jupes, Jupey Poops, Jupiter Poopiter, <br> Jupey Mother F'in Poopies
+				</li>
+				<li>
+					<strong>Fun Tidbit</strong>
+					<ul>
+						<li>Stumbles on her wheel anytime the light in a room changes!</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Born</strong>
+					May 30th, 2022
+				</li>
+				<li>
+					<strong>Adopted</strong>
+					July 9th, 2022
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	<div class="meet-container meet-mushroom">
+		<img src="<?php url('images/mushroom.jpg'); ?>" />
+		<h2>Mushroom</h2>
+		<div class="meet-stats">
+			<ul>
+				<li>
+					<strong>Nicknames</strong>
+					Mush, Mushy-ush, <br>MUSHROOM STOP BITING ME
+				</li>
+				<li>
+					<strong>Fun Tidbit</strong>
+					<ul>
+						<li>Strong enough to carry her seed ball around the enclosure...in her teeth!</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Born</strong>
+					May 30th, 2022
+				</li>
+				<li>
+					<strong>Adopted</strong>
+					July 10th, 2022
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="text-center">
+	<?php // Why the difference in adoption dates if they're sisters? ?>
+</div>
+
+<?php // Close Container ?>
+</div>
+
+<img src="<?php url('images/white-top.png'); ?>" />
+<div class="chart-container">
+	<div class="mini-container mb">
+		<h2>Wheel Spins</h2>
+		<p>Since November 11th, 2023, the girls have had pedometers on their wheels. This helped us keep track of how active they were at night, especially since their most active hours are between 1-4am. We knew they were active at night, but we didn't know <i>how</i> active. We really wish we got these much earlier, but we never knew they existed, so we'll take any data we can get.</p>
+		<br>
+		<p>We always thought <strong class="j">Jupiter</strong> was the runner of the two, considering we'd never really seen <strong class="m">Mushroom</strong> out on her wheel when we were awake, so we were expecting her numbers to be low. We know any enclosure cleanings stressed her out, which is why we try to do full cleans as little as possible, so those days typically have a higher spike. This we expected.</p>
+		<br>
+		<p>What we didn't expect was the explosion of speed and endurance <strong class="m">Mushroom</strong> had! We were shocked the first night she crossed the 15,000 spin threshold, thinking "wow she finally caught up to Jupes!", but then proceeded to blow past her. As of right now her record stands at 30,962 spins.<p>
+		<br>
+		<p>Accounting for just about 26" per rotation on her 8.25" wheel, and shaving by <?php echo $ratio_m * 100; ?>% since it still spins once she hops off, that comes to <?php echo number_format( 30962 * ( 1 - $ratio_m ) * 25.918 ); ?> inches of travel. That is <strong><?php echo number_format( 30962 * ( 1 - $ratio_m ) * 25.918 / (12*5280), 3 ); ?></strong> miles! Can you imagine!? I struggle to run one mile, and this little ham does double digits some nights.</p>
+		<br>
+		<p>These days, the girls seemed to have slowed down, keeping to under 10k spins most nights. A part of me wants to believe they just thrive in the cold weather months, or enjoy the blasts of heat from the vents near by late at night, but they're getting old. While the 20k plus spin nights were a sight to behold, we'll still appreciate even the sub 5k nights, hearing the little pitter patter in the background, along with the occasional stumble.</p>
+		<br>
+		<p>Yes, I'm talking about you <strong class="j">Jupiter</strong>.</p>
+	</div>
+	<div class="container">
+		<div id="chartdiv"></div>
+	</div>
+
+	
+	<?php //echo json_encode( $wheel_data ); ?>
+
+	<div class="container">
+		<p class="mt">Since Nov 11, 2023</p>
+		<div class="flex columns equal top mt">
+			<div class="mb">
+				<div class="legend legend-j"></div>
+				<strong class="j">Jupiter</strong><br>
+				<small class="block">8.625" Diameter Wheel</small><br>
+				<?php echo number_format( $wd_j[0] ); ?> Spins<br>
+				<small><?php echo number_format( $wd_j[0] * ( 1 - $wd_j[1] ) ); ?> (adjusted)</small><br>=<br>
+				<?php echo number_format( $wd_j[0] * ( 1 - $wd_j[1] ) * ($wd_j[2] * pi() ) / (12*5280), 3 ); ?> Miles
+			</div>
+			<div class="mb">
+				<div class="legend legend-m"></div>
+				<strong class="m">Mushroom</strong><br>
+				<small class="block">8.25" Diameter Wheel</small><br>
+				<?php echo number_format( $wd_m[0] ); ?> Spins<br>
+				<small><?php echo number_format( $wd_m[0] * ( 1 - $wd_m[1] ) ); ?> (adjusted)</small><br>=<br>
+				<?php echo number_format( $wd_m[0] * ( 1 - $wd_m[1] ) * ($wd_m[2] * pi() ) / (12*5280), 3 ); ?> Miles
+			</div>
+		</div>
+	</div>
+
+</div>
+<img src="<?php url('images/white-bottom.png'); ?>" />
+
+<script src="<?php echo url('wheel_data.js'); ?>"></script>
+<script src="<?php echo url('chart.js'); ?>"></script>
+
+<?php // Open Container ?>
+<div class="container">
+
+	<div class="mt mb">
+		<h2>"Are you girls a town in Florida? Because you look like My Hami"</h2>
+		<span>- Brian</span>
+	</div>
+
+<?php include( 'footer.php' ); ?>

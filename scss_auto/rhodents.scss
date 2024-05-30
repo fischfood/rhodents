@@ -30,6 +30,10 @@ body {
 	display: block;
 }
 
+.bg-white {
+	background: white;
+}
+
 a:hover, a:hover * {
 	cursor: pointer !important;
 	//cursor: url(../images/seed30-bit-light.png), pointer !important;
@@ -68,6 +72,27 @@ a:hover, a:hover * {
 		}
 	}
 
+	&.third {
+		> div {
+			flex: 0 0 33.33333%;
+			@media only screen and ( max-width: 600px ) {
+				flex: 1 1 100%;
+			}
+		}
+	}
+
+	&.quarter {
+		> div {
+			flex: 0 0 25%;
+			@media only screen and ( max-width: 800px ) {
+				flex: 0 0 50%;
+			}
+			@media only screen and ( max-width: 500px ) {
+				flex: 1 1 100%;
+			}
+		}
+	}
+
 	&.top {
 		align-items: flex-start;
 	}
@@ -81,6 +106,14 @@ a:hover, a:hover * {
 	margin-top: 2rem;
 }
 
+.pb {
+	padding-bottom: 2rem;
+}
+
+.pt {
+	padding-top: 2rem;
+}
+
 .chart, .charts {
 	width: 100%;
 	height: 400px;
@@ -90,7 +123,7 @@ a:hover, a:hover * {
 
 	button {
 		display: inline-block;
-		padding: .5rem 1rem;
+		padding: .5rem 1.5rem;
         margin: .5rem;
         border-radius: 100px;
         text-decoration: none;
@@ -217,5 +250,17 @@ a:hover, a:hover * {
 	}
 	&-m {
 		background-color: $m;
+	}
+}
+
+// 05. Photos
+.photo-container {
+	.flex > div {
+		padding: 1rem;
+
+		figcaption {
+			display: block;
+			margin-top: .5rem;
+		}
 	}
 }

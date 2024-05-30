@@ -1,4 +1,3 @@
-    </div>
 
     <footer id="footer">
         <div class="skyline">

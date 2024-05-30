@@ -6,7 +6,7 @@
         </div>
         <div class="footer-content">
             <div class="container">
-                <p>Rhodents <span class="copy">&copy;</span> <?php echo date('Y'); ?>. All Rights Reserved.</p>
+                <p>Rhodents <span class="copy">&copy;</span> <?php echo date('Y'); ?>. All Rights Reserved. Built by <a class="bf" href="https://brianfischer.me">Brian Fischer</a></p>
             </div>
         </div>
     </footer>

@@ -2,6 +2,8 @@
 <?php include('wheel_data.php'); ?>
 
 <?php
+date_default_timezone_set('America/New_York');
+
 $start_date = new DateTime(date("2022/05/30"));
 $end_date = new DateTime( "today" );
 $dd = date_diff($start_date,$end_date);

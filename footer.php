@@ -2,8 +2,8 @@
 
     <footer id="footer">
         <div class="skyline">
-            <img src="<?php echo url('images/skyline.png'); ?>" />
-            <img class="skyline-wheel"src="<?php echo url('images/skyline-wheel.png'); ?>" />
+            <img src="<?php echo url('assets/skyline.png'); ?>" />
+            <img class="skyline-wheel"src="<?php echo url('assets/skyline-wheel.png'); ?>" />
         </div>
         <div class="footer-content">
             <div class="container">

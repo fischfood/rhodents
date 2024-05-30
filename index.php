@@ -96,21 +96,29 @@ $datediff = $now - $your_date;
 <div class="chart-container">
 	<div class="mini-container mb">
 		<h2>Wheel Spins</h2>
-		<p>Since November 11th, 2023, the girls have had pedometers on their wheels. This helped us keep track of how active they were at night, especially since their most active hours are between 1-4am. We knew they were active at night, but we didn't know <i>how</i> active. We really wish we got these much earlier, but we never knew they existed, so we'll take any data we can get.</p>
+		<p>Since November 11th, 2023, the girls have had pedometers on their wheels. This helped us keep track of how active they were at night, especially since their most active hours are between 1-4 AM. We knew they were active at night, but we didn't know <i>how</i> active. We really wish we had gotten these much earlier, but we never knew they existed, so we'll take any data we can get.</p>
 		<p>We always thought <strong class="j">Jupiter</strong> was the runner of the two, considering we'd never really seen <strong class="m">Mushroom</strong> out on her wheel when we were awake, so we were expecting her numbers to be low. We know any enclosure cleanings stressed her out, which is why we try to do full cleans as little as possible, so those days typically have a higher spike. This we expected.</p>
-		<p>What we didn't expect was the explosion of speed and endurance <strong class="m">Mushroom</strong> had! We were shocked the first night she crossed the 15,000 spin threshold, thinking "wow she finally caught up to Jupes!", but then proceeded to blow past her. As of right now her record stands at 30,962 spins.<p>
+		<p>What we didn't expect was the explosion of speed and endurance <strong class="m">Mushroom</strong> had! We were shocked the first night she crossed the 15,000 spin threshold, thinking "wow she finally caught up to Jupes!", but then proceeded to blow past her. As of today, her record stands at 30,962 spins.<p>
 		<p>Accounting for just about 26" per rotation on her 8.25" wheel, and shaving by <?php echo $ratio_m * 100; ?>% since it still spins once she hops off, that comes to <?php echo number_format( 30962 * ( 1 - $ratio_m ) * 25.918 ); ?> inches of travel. That is <strong><?php echo number_format( 30962 * ( 1 - $ratio_m ) * 25.918 / (12*5280), 3 ); ?></strong> miles! Can you imagine!? I struggle to run one mile, and this little ham does double digits some nights.</p>
 		<p>These days, the girls seem to have slowed down, keeping to under 10k spins most nights. A part of me wants to believe they just thrive in the cold weather months, or enjoy the blasts of heat from the vents near by late at night, but they're getting old. While the 20k plus spin nights were a sight to behold, we still appreciate the sub 5k nights, hearing the little pitter patter in the background, along with the occasional stumble.</p>
 		<p>Yes, I'm talking about you <strong class="j">Jupiter</strong>.</p>
 	</div>
 	<div class="container chart-toggle">
 		<button class="active" data-toggle="spinChart">Rotations</button>
-		<button data-toggle="mileChart">Miles</button>
+		<button data-toggle="mileChart">Mileage</button>
+		<button data-toggle="cumulativeSpinChart">Cumulative Rotations</button>
+		<button data-toggle="cumulativeMileChart">Cumulative Mileage</button>
 	</div>
 	<div class="container charts">
 		<div id="spinChart" class="chart active"></div>
 		<div id="mileChart" class="chart hidden"></div>
+		<div id="cumulativeSpinChart" class="chart hidden"></div>
+		<div id="cumulativeMileChart" class="chart hidden"></div>
 	</div>
+	<small>
+		The girls are usually active anywhere between 7PM and 4AM the next morning.<br>
+		We count rotations for the day beginning when they wake up. Rotations reset around noon.
+	</small>
 
 	<div class="container">
 		<p class="mt">Since Nov 11, 2023</p>
@@ -147,12 +155,18 @@ $datediff = $now - $your_date;
 			m: item[2],
 			jm: parseFloat(item[3].toFixed(3)),
 			mm: parseFloat(item[4].toFixed(3)),
+			jcs: item[5],
+			mcs: item[6],
+			jms: parseFloat(item[7].toFixed(3)),
+			mms: parseFloat(item[8].toFixed(3))
 		};
 	});
 </script>
 
 <script src="<?php echo url('spinChart.js'); ?>"></script>
 <script src="<?php echo url('mileChart.js'); ?>"></script>
+<script src="<?php echo url('cumulativeSpinChart.js'); ?>"></script>
+<script src="<?php echo url('cumulativeMileChart.js'); ?>"></script>
 
 
 <div class="container">

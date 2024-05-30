@@ -199,7 +199,8 @@ $wheel_data = [
     ["2024-05-25", 10424, 5353 ],
     ["2024-05-26", 9036, 3947 ],
     ["2024-05-27", 9437, 5281 ],
-    ["2024-05-28", 9437, 5281 ]
+    ["2024-05-28", 10253, 2961 ],
+    ["2024-05-29", 8538, 3541 ],
 ];
 
 $ratio_j = 0.03;
@@ -208,19 +209,31 @@ $ratio_m = 0.15;
 $radius_j = 8.625;
 $radius_m = 8.25;
 
-$wd_j = [0, $ratio_j, $radius_j ];
-$wd_m = [0, $ratio_m, $radius_m ];
+$wd_j = [0, $ratio_j, $radius_j, 0 ];
+$wd_m = [0, $ratio_m, $radius_m, 0 ];
 
-$js_spins = [];
-$js_miles = [];
 
 foreach( $wheel_data as $row => $wd ) {
     $wd_j[0] += $wd[1];
     $wd_m[0] += $wd[2];
 
+    $mileage_j = $wd[1] * ( 1 - $ratio_j ) * ( $radius_j * pi() ) / ( 12*5280 );
+    $mileage_m = $wd[2] * ( 1 - $ratio_m ) * ( $radius_m * pi() ) / ( 12*5280 );
+
     // Set Jupiter Mileage
-    $wheel_data[$row][3] = $wd[1] * ( 1 - $ratio_j ) * ( $radius_j * pi() ) / ( 12*5280 );
+    $wheel_data[$row][3] = $mileage_j;
 
     // Set Mushroom Mileage
-    $wheel_data[$row][4] = $wd[2] * ( 1 - $ratio_m ) * ( $radius_m * pi() ) / ( 12*5280 );
+    $wheel_data[$row][4] = $mileage_m;
+
+    $wd_j[3] += $mileage_j;
+    $wd_m[3] += $mileage_m;
+
+    // Set Jupiter Steps Cumulative
+    $wheel_data[$row][5] = $wd_j[0];
+    $wheel_data[$row][7] = $wd_j[3];
+
+    // Set Mushroom Steps Cumulative
+    $wheel_data[$row][6] = $wd_m[0];
+    $wheel_data[$row][8] = $wd_m[3];
 }

@@ -6,7 +6,7 @@
     <h3>Work In Progress</h3>
     <p>Right now, I mostly have photos from the first few months of their lives, since it's 2:15am as of writing this and I don't feel like combing through more, so check back soon for more hamster cuteness and shenanigans!</p>
     <br>
-    <p>Also, I'm going to preface this by saying there are going to be way more photos of Jupiter. This isn't some favorite child kind of thing, it's just due to Jupiter's much more social and awake earlier personality</p>
+    <p>Also, I'm going to preface this by saying there are going to be way more photos of Jupiter. This isn't some favorite child kind of thing, it's just due to Jupiter's much more social and early bird personality, if you can call 9 PM early.</p>
 </div>
 
 <?php $photo_data = [

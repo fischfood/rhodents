@@ -10,7 +10,7 @@ Much like their mom, they have no plans to leave Rhode Island.</p>
 
 <div class="flex equal top meet">
 	<div class="meet-container meet-jupiter">
-		<img src="<?php url('images/jupes.jpg'); ?>" />
+		<img src="<?php url('assets/jupes.jpg'); ?>" />
 		<h2>Jupiter</h2>
 		<div class="meet-stats">
 			<ul>
@@ -37,7 +37,7 @@ Much like their mom, they have no plans to leave Rhode Island.</p>
 		</div>
 	</div>
 	<div class="meet-container meet-mushroom">
-		<img src="<?php url('images/mushroom.jpg'); ?>" />
+		<img src="<?php url('assets/mushroom.jpg'); ?>" />
 		<h2>Mushroom</h2>
 		<div class="meet-stats">
 			<ul>
@@ -71,7 +71,7 @@ Much like their mom, they have no plans to leave Rhode Island.</p>
 <?php // Close Container ?>
 </div>
 
-<img src="<?php url('images/white-top.png'); ?>" />
+<img src="<?php url('assets/white-top.png'); ?>" />
 <div class="chart-container">
 	<div class="mini-container mb">
 		<h2>Wheel Spins</h2>
@@ -83,16 +83,18 @@ Much like their mom, they have no plans to leave Rhode Island.</p>
 		<br>
 		<p>Accounting for just about 26" per rotation on her 8.25" wheel, and shaving by <?php echo $ratio_m * 100; ?>% since it still spins once she hops off, that comes to <?php echo number_format( 30962 * ( 1 - $ratio_m ) * 25.918 ); ?> inches of travel. That is <strong><?php echo number_format( 30962 * ( 1 - $ratio_m ) * 25.918 / (12*5280), 3 ); ?></strong> miles! Can you imagine!? I struggle to run one mile, and this little ham does double digits some nights.</p>
 		<br>
-		<p>These days, the girls seemed to have slowed down, keeping to under 10k spins most nights. A part of me wants to believe they just thrive in the cold weather months, or enjoy the blasts of heat from the vents near by late at night, but they're getting old. While the 20k plus spin nights were a sight to behold, we'll still appreciate even the sub 5k nights, hearing the little pitter patter in the background, along with the occasional stumble.</p>
+		<p>These days, the girls seem to have slowed down, keeping to under 10k spins most nights. A part of me wants to believe they just thrive in the cold weather months, or enjoy the blasts of heat from the vents near by late at night, but they're getting old. While the 20k plus spin nights were a sight to behold, we still appreciate the sub 5k nights, hearing the little pitter patter in the background, along with the occasional stumble.</p>
 		<br>
 		<p>Yes, I'm talking about you <strong class="j">Jupiter</strong>.</p>
 	</div>
-	<div class="container">
-		<div id="chartdiv"></div>
+	<div class="container chart-toggle">
+		<button class="active" data-toggle="spinChart">Rotations</button>
+		<button data-toggle="mileChart">Miles</button>
 	</div>
-
-	
-	<?php //echo json_encode( $wheel_data ); ?>
+	<div class="container charts">
+		<div id="spinChart" class="chart active"></div>
+		<div id="mileChart" class="chart hidden"></div>
+	</div>
 
 	<div class="container">
 		<p class="mt">Since Nov 11, 2023</p>
@@ -117,10 +119,24 @@ Much like their mom, they have no plans to leave Rhode Island.</p>
 	</div>
 
 </div>
-<img src="<?php url('images/white-bottom.png'); ?>" />
+<img src="<?php url('assets/white-bottom.png'); ?>" />
 
-<script src="<?php echo url('wheel_data.js'); ?>"></script>
-<script src="<?php echo url('chart.js'); ?>"></script>
+<?php /* <script src="<?php echo url('wheel_data.js'); ?>"></script> */ ?>
+<script>
+	var wheel_encoded = <?php echo json_encode( $wheel_data ); ?>;
+	var wheel_data = wheel_encoded.map(function(item) {
+		return {
+			date: new Date(item[0] + "T11:00:00").getTime(),
+			j: item[1],
+			m: item[2],
+			jm: parseFloat(item[3].toFixed(3)),
+			mm: parseFloat(item[4].toFixed(3)),
+		};
+	});
+</script>
+
+<script src="<?php echo url('spinChart.js'); ?>"></script>
+<script src="<?php echo url('mileChart.js'); ?>"></script>
 
 <?php // Open Container ?>
 <div class="container">

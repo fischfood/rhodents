@@ -205,10 +205,22 @@ $wheel_data = [
 $ratio_j = 0.03;
 $ratio_m = 0.15;
 
-$wd_j = [0, $ratio_j, 8.625 ];
-$wd_m = [0, $ratio_m, 8.25 ];
+$radius_j = 8.625;
+$radius_m = 8.25;
 
-foreach( $wheel_data as $wd ) {
+$wd_j = [0, $ratio_j, $radius_j ];
+$wd_m = [0, $ratio_m, $radius_m ];
+
+$js_spins = [];
+$js_miles = [];
+
+foreach( $wheel_data as $row => $wd ) {
     $wd_j[0] += $wd[1];
     $wd_m[0] += $wd[2];
+
+    // Set Jupiter Mileage
+    $wheel_data[$row][3] = $wd[1] * ( 1 - $ratio_j ) * ( $radius_j * pi() ) / ( 12*5280 );
+
+    // Set Mushroom Mileage
+    $wheel_data[$row][4] = $wd[2] * ( 1 - $ratio_m ) * ( $radius_m * pi() ) / ( 12*5280 );
 }

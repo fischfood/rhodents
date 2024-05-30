@@ -1,5 +1,5 @@
 // Set data
-var data = [
+var wheel_data = [
     { date: new Date("2023-11-11T11:00:00").getTime(), j: 4529, m: 14209 },
     { date: new Date("2023-11-12T11:00:00").getTime(), j: 3378, m: 9203 },
     { date: new Date("2023-11-13T11:00:00").getTime(), j: 5180, m: 6289 },
@@ -201,4 +201,3 @@ var data = [
     { date: new Date("2024-05-27T11:00:00").getTime(), j: 9437, m: 5281 },
     { date: new Date("2024-05-28T11:00:00").getTime(), j: 9437, m: 5281 },
 ]
-

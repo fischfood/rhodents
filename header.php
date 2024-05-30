@@ -46,19 +46,20 @@ function is_home() {
 </head>
 
 <body>
+
     <div class="container">
         <div class="hero">
             <a href="<?php url(); ?>">
-                <img src="<?php url('images/rhodents_logo.png'); ?>" alt="Rhodents Logo"/>
+                <img src="<?php url('assets/rhodents_logo.png'); ?>" alt="Rhodents Logo"/>
             </a>
             <p class="subhead">Two of the world’s cutest hamsters living their best life in Rhode Island</p>
             
-            <?php /*
             <div class="main-nav">
                 <a href="<?php url(); ?>">Meet the Girls</a>
                 <a href="<?php url('history'); ?>">History</a>
                 <a href="<?php url('enclosures'); ?>">Enclosures</a>
                 <a href="<?php url('photos'); ?>">Photos</a>
             </div>
-            */ ?>
         </div>
+
+    <?php // Container closed in footer ?>

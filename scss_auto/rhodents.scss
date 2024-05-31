@@ -57,6 +57,11 @@ a:hover, a:hover * {
 	//cursor: url(../images/arrow2582.png), pointer !important;
 }
 
+video {
+	background: $m;
+	margin: 0 auto;
+}
+
 .container {
 	margin: 0 auto;
 	width: calc(100vw - 2rem);

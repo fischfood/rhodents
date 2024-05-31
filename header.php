@@ -14,10 +14,14 @@ function is_home() {
 
     return false;
 }
+
+$url_title = array_filter( explode( '/', trim( $_SERVER['REQUEST_URI'] ) ) );
+$meta_title = ( ! empty( $url_title ) ) ? ucfirst( array_pop($url_title) ) : 'Rhodents';
+
 ?>
 
 <head>
-    <title>Rhodents - Rhode Island's Two Cutest Hamsters</title>
+    <title><?php echo $meta_title; ?> - Rhode Island's Two Cutest Hamsters</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
@@ -35,7 +39,7 @@ function is_home() {
     gtag('config', 'G-FS5YYLWVFC');
     </script>
 
-    <link rel="stylesheet" href="<?php url('/css/rhodents.css?ts=2024053-0050'); ?>">
+    <link rel="stylesheet" href="<?php url('/css/rhodents.css?ts=2024053-2031'); ?>">
 
     <?php if ( is_home() ): ?>
         <script src="https://cdn.amcharts.com/lib/5/index.js"></script>

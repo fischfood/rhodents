@@ -61,7 +61,7 @@ $datediff = $now - $your_date;
 				<ul>
 					<li>
 						<strong>Nicknames</strong>
-						Mush, Mushy-ush, <br>MUSHROOM STOP BITING ME
+						Mush, Mushpatoodles, <br>MUSHROOM STOP BITING ME
 					</li>
 					<li>
 						<strong>Fun Tidbit</strong>

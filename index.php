@@ -103,17 +103,22 @@ $datediff = $now - $your_date;
 		<p>These days, the girls seem to have slowed down, keeping to under 10k spins most nights. A part of me wants to believe they just thrive in the cold weather months, or enjoy the blasts of heat from the vents near by late at night, but they're getting old. While the 20k plus spin nights were a sight to behold, we still appreciate the sub 5k nights, hearing the little pitter patter in the background, along with the occasional stumble.</p>
 		<p>Yes, I'm talking about you <strong class="j">Jupiter</strong>.</p>
 	</div>
-	<div class="container chart-toggle">
+	<div class="container chart-toggle" id="chart">
 		<button class="active" data-toggle="spinChart">Rotations</button>
-		<button data-toggle="mileChart">Mileage</button>
 		<button data-toggle="cumulativeSpinChart">Cumulative Rotations</button>
+		<button data-toggle="avgChart">Rolling Average Rotations</button>
+		<br>
+		<button data-toggle="mileChart">Mileage</button>
 		<button data-toggle="cumulativeMileChart">Cumulative Mileage</button>
+		<button data-toggle="avgMileChart">Rolling Average Miles</button>
 	</div>
 	<div class="container charts">
 		<div id="spinChart" class="chart active"></div>
 		<div id="mileChart" class="chart hidden"></div>
 		<div id="cumulativeSpinChart" class="chart hidden"></div>
 		<div id="cumulativeMileChart" class="chart hidden"></div>
+		<div id="avgChart" class="chart hidden"></div>
+		<div id="avgMileChart" class="chart hidden"></div>
 	</div>
 	<small>
 		The girls are usually active anywhere between 7PM and 4AM the next morning.<br>
@@ -158,7 +163,11 @@ $datediff = $now - $your_date;
 			jcs: item[5],
 			mcs: item[6],
 			jms: parseFloat(item[7].toFixed(3)),
-			mms: parseFloat(item[8].toFixed(3))
+			mms: parseFloat(item[8].toFixed(3)),
+			javg: parseFloat(item[9].toFixed(3)),
+			mavg: parseFloat(item[10].toFixed(3)),
+			javgmi: parseFloat(item[11].toFixed(3)),
+			mavgmi: parseFloat(item[12].toFixed(3))
 		};
 	});
 </script>
@@ -167,6 +176,8 @@ $datediff = $now - $your_date;
 <script src="<?php echo url('mileChart.js'); ?>"></script>
 <script src="<?php echo url('cumulativeSpinChart.js'); ?>"></script>
 <script src="<?php echo url('cumulativeMileChart.js'); ?>"></script>
+<script src="<?php echo url('avgChart.js'); ?>"></script>
+<script src="<?php echo url('avgMileChart.js'); ?>"></script>
 
 
 <div class="container">

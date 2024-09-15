@@ -111,10 +111,15 @@ $datediff = $now - $your_date;
 		<button data-toggle="mileChart">Mileage</button>
 		<button data-toggle="cumulativeMileChart">Cumulative Mileage</button>
 		<button data-toggle="avgMileChart">Rolling Average Miles</button>
+		<br>
+		<button data-toggle="spinChart30">Rotations - 30 Day</button>
+		<button data-toggle="mileChart30">Mileage - 30 Day</button>
 	</div>
 	<div class="container charts">
 		<div id="spinChart" class="chart active"></div>
 		<div id="mileChart" class="chart hidden"></div>
+		<div id="spinChart30" class="chart hidden"></div>
+		<div id="mileChart30" class="chart hidden"></div>
 		<div id="cumulativeSpinChart" class="chart hidden"></div>
 		<div id="cumulativeMileChart" class="chart hidden"></div>
 		<div id="avgChart" class="chart hidden"></div>
@@ -153,6 +158,8 @@ $datediff = $now - $your_date;
 <?php /* <script src="<?php echo url('wheel_data.js'); ?>"></script> */ ?>
 <script>
 	var wheel_encoded = <?php echo json_encode( $wheel_data ); ?>;
+	var wheel_encoded_30 = <?php echo json_encode( $last_30 ); ?>;
+
 	var wheel_data = wheel_encoded.map(function(item) {
 		return {
 			date: new Date(item[0] + "T11:00:00").getTime(),
@@ -170,10 +177,22 @@ $datediff = $now - $your_date;
 			mavgmi: parseFloat(item[12].toFixed(3))
 		};
 	});
+
+	var wheel_data_30 = wheel_encoded_30.map(function(i30) {
+		return {
+			date: new Date(i30[0] + "T11:00:00").getTime(),
+			j30: i30[1],
+			m30: i30[2],
+			j30m: parseFloat(i30[3].toFixed(3)),
+			m30m: parseFloat(i30[4].toFixed(3)),
+		};
+	});
 </script>
 
 <script src="<?php echo url('spinChart.js'); ?>"></script>
 <script src="<?php echo url('mileChart.js'); ?>"></script>
+<script src="<?php echo url('spinChart30.js'); ?>"></script>
+<script src="<?php echo url('mileChart30.js'); ?>"></script>
 <script src="<?php echo url('cumulativeSpinChart.js'); ?>"></script>
 <script src="<?php echo url('cumulativeMileChart.js'); ?>"></script>
 <script src="<?php echo url('avgChart.js'); ?>"></script>
